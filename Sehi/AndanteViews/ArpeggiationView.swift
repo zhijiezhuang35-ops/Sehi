@@ -12,7 +12,7 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         }
     
     required init?(coder: NSCoder) {
-           fatalError("init(coder:) has not been implemented")
+        fatalError("bLLzz756HR9lKM54mmUk1K1hpaUqOfoECh56A33SaBHaXGNsAupnKwRSGr2bUn6p".brokenchoDecipher())
        }
 
     override func viewDidLoad() {
@@ -44,16 +44,16 @@ struct WebView: UIViewRepresentable {
         
         
         let userContent = WKUserContentController()
-        userContent.add(context.coordinator, name: "payment")
-        userContent.add(context.coordinator, name: "close")
-        userContent.add(context.coordinator, name: "userListUpdate")
-        userContent.add(context.coordinator, name: "postsUpdate")
-        userContent.add(context.coordinator, name: "commentsUpdate")
-        userContent.add(context.coordinator, name: "chatsUpdate")
-        userContent.add(context.coordinator, name: "messagesUpdate")
-        userContent.add(context.coordinator, name: "logout")
-        userContent.add(context.coordinator, name: "login")
-        userContent.add(context.coordinator, name: "newsignup")
+        userContent.add(context.coordinator, name: "dGd6t6I2IOmxVkZZZY2v7A==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "5GshZC4MpL3fxrxDUS0dJw==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "XSMNAgew4pOZLQlh0vydQQ==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "hqX1wanZe3Sm9Xou79vpYg==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "N8SZdVv6Ox1EllsNVlvQFw==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "M8007ijkA1kVAlu/hMqwrA==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "acJO/NQOoIwTERqO6juf+A==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "VqR8xYBjmzTygQGdfpu3gg==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "eScV8aTzmcQOXNLNIVmM9Q==".brokenchoDecipher())
+        userContent.add(context.coordinator, name: "0hJjql6Ogui+LLLFXC31sw==".brokenchoDecipher())
         
         
         
@@ -64,32 +64,32 @@ struct WebView: UIViewRepresentable {
 
         if let cadenceUserData = try? JSONSerialization.data(withJSONObject: MelodicUsers().getResults(), options: []),
                let cadenceUserString = String(data: cadenceUserData, encoding: .utf8) {
-                jsCode += "window.userList = \(cadenceUserString);"
+            jsCode += "\("DDMeLSTEEPV1eWLX2WNkxXmZU3VuikFxymCYCrT6OvE=".brokenchoDecipher()) \(cadenceUserString);"
             }
 
             if let variationDynamicData = try? JSONSerialization.data(withJSONObject: OstinatoPosts().getResults(), options: []),
                let variationDynamicString = String(data: variationDynamicData, encoding: .utf8) {
-                jsCode += "window.postList = \(variationDynamicString);"
+                jsCode += "\("dsBLO0jJpGiP6ZjP9tEdehBx5sQLTo/E+l3YQ5csUKk=".brokenchoDecipher()) \(variationDynamicString);"
             }
 
             if let iopointenUsersData = try? JSONSerialization.data(withJSONObject: StrikingChat().getMechanism(), options: []),
                let iopointenUsersString = String(data: iopointenUsersData, encoding: .utf8) {
-                jsCode += "window.chatList = \(iopointenUsersString);"
+                jsCode += "\("7ic36OA/mEczYfa+fcLWoGPtMo7oheJ1RF4CcYMg5xs=".brokenchoDecipher()) \(iopointenUsersString);"
             }
 
             if let sucabrerCommentData = try? JSONSerialization.data(withJSONObject: DiminishedUtil.shared.uprightLogUser, options: []),
                let sucabrerCommentString = String(data: sucabrerCommentData, encoding: .utf8) {
-                jsCode += "window.currentUser = \(sucabrerCommentString);"
+                jsCode += "\("oGiSJBx52z6O2aAaH1gujH4cN+UyTuJU1TQrb3HOf9A=".brokenchoDecipher()) \(sucabrerCommentString);"
             }
 
             if let shoutfitesChatData = try? JSONSerialization.data(withJSONObject: DileicaleMes().getResults(), options: []),
                let shoutfitesChatString = String(data: shoutfitesChatData, encoding: .utf8) {
-                jsCode += "window.messageList = \(shoutfitesChatString);"
+                jsCode += "\("pvyOVJNR6B2A1wRdmKaE+fy9Q/tXWURcewf1DaKCjkU=".brokenchoDecipher()) \(shoutfitesChatString);"
             }
 
             if let weatigtsrMessageData = try? JSONSerialization.data(withJSONObject: GlissandoComm().getResults(), options: []),
                let weatigtsrMessageString = String(data: weatigtsrMessageData, encoding: .utf8) {
-                jsCode += "window.commentList = \(weatigtsrMessageString);"
+                jsCode += "\("838zQNZh6h9MeQLvNLGBBjNnLOGpLnu8zTgm7MD9VFM=".brokenchoDecipher()) \(weatigtsrMessageString);"
             }
 
             let userScript = WKUserScript(
@@ -98,7 +98,7 @@ struct WebView: UIViewRepresentable {
                 forMainFrameOnly: true
             )
             userContent.addUserScript(userScript)
-            // ======= 注入 JS 完成 =======
+            
         
         
         
@@ -140,7 +140,6 @@ struct WebView: UIViewRepresentable {
     class Coordinator: NSObject, WKScriptMessageHandler, WKNavigationDelegate,WKUIDelegate {
         var parent: WebView
         weak var currentWebView: WKWebView?
-        private var speodbreathr: Date? = nil
         init(parent: WebView) {
             self.parent = parent
          
@@ -148,10 +147,10 @@ struct WebView: UIViewRepresentable {
         
         
 
-        // 接收 JS 消息
+        
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-           print(message.name)
-            if message.name == "close" {
+          
+            if message.name == "5GshZC4MpL3fxrxDUS0dJw==".brokenchoDecipher() {
                 
                 
                 
@@ -169,10 +168,10 @@ struct WebView: UIViewRepresentable {
                 }
                
                
-            }else if message.name == "postsUpdate" {
-                print(message.body)
+            }else if message.name == "hqX1wanZe3Sm9Xou79vpYg==".brokenchoDecipher() {
+               
                 if let dict = message.body as? [String: Any],
-                   let posts = dict["posts"] as? [[String: Any]] {
+                   let posts = dict["pLeCPmfTXlx/qojVPK98vw==".brokenchoDecipher()] as? [[String: Any]] {
                     
                    
 
@@ -182,9 +181,9 @@ struct WebView: UIViewRepresentable {
                     
                   
                 }
-            } else if message.name == "userListUpdate" {
+            } else if message.name == "XSMNAgew4pOZLQlh0vydQQ==".brokenchoDecipher() {
                 if let dict = message.body as? [String: Any],
-                   let users = dict["users"] as? [[String: Any]] {
+                   let users = dict["dIRdEZbn0ZJE2n+vg2DZ2g==".brokenchoDecipher()] as? [[String: Any]] {
                     
                    
 
@@ -199,11 +198,11 @@ struct WebView: UIViewRepresentable {
                         } ?? [:]
                     }
                     
-                    print(DiminishedUtil.shared.uprightLogUser)
+                   
                 }
-            } else if message.name == "commentsUpdate" {
+            } else if message.name == "N8SZdVv6Ox1EllsNVlvQFw==".brokenchoDecipher() {
                 if let dict = message.body as? [String: Any],
-                   let comments = dict["comments"] as? [[String: Any]] {
+                   let comments = dict["6TgvxKOEY71O6j7JT9QRtg==".brokenchoDecipher()] as? [[String: Any]] {
                     
                    
 
@@ -213,9 +212,9 @@ struct WebView: UIViewRepresentable {
                     
 
                 }
-            } else if message.name == "chatsUpdate" {
+            } else if message.name == "M8007ijkA1kVAlu/hMqwrA==".brokenchoDecipher() {
                 if let dict = message.body as? [String: Any],
-                   let chats = dict["chats"] as? [[String: Any]] {
+                   let chats = dict["POjrwU82ktC36h3ilTs2MQ==".brokenchoDecipher()] as? [[String: Any]] {
                     
                    
 
@@ -225,9 +224,9 @@ struct WebView: UIViewRepresentable {
                     
 
                 }
-            } else if message.name == "messagesUpdate" {
+            } else if message.name == "acJO/NQOoIwTERqO6juf+A==".brokenchoDecipher() {
                 if let dict = message.body as? [String: Any],
-                   let messages = dict["messages"] as? [[String: Any]] {
+                   let messages = dict["nZ9YM/LVCMMl0Jy3lprtPQ==".brokenchoDecipher()] as? [[String: Any]] {
                     
                    
 
@@ -238,11 +237,11 @@ struct WebView: UIViewRepresentable {
 
                 }
             }
-            else if message.name == "newsignup" {
+            else if message.name == "0hJjql6Ogui+LLLFXC31sw==".brokenchoDecipher() {
                 
 
                 if let dict = message.body as? [String: Any],
-                   let userInfo = dict["userInfo"] as? [String: Any] {
+                   let userInfo = dict["YKP8UkhC2tI+jWfr2EDwUg==".brokenchoDecipher()] as? [String: Any] {
 
                     let melodicUsers = MelodicUsers()
 
@@ -266,9 +265,9 @@ struct WebView: UIViewRepresentable {
                 }
             }
             
-            else if message.name == "logout" {
+            else if message.name == "VqR8xYBjmzTygQGdfpu3gg==".brokenchoDecipher() {
                 if let dict = message.body as? [String: Any],
-                   let messages = dict["isLogout"] as? Bool {
+                   let messages = dict["7qdk2ThHITafUH8UPS82Aw==".brokenchoDecipher()] as? Bool {
                     
                    
                    
@@ -280,26 +279,23 @@ struct WebView: UIViewRepresentable {
                            }
                     }
                 }
-           }else if message.name == "login" {
-               //跳转页面
-               print("进入login事件")
-               print("onLogin 是否为空:", self.parent.onLogin == nil)
-                  
+            }else if message.name == "eScV8aTzmcQOXNLNIVmM9Q==".brokenchoDecipher() {
+            
                   DispatchQueue.main.async {
                       self.parent.onLogin?()
                   }
           }
             
-            else if message.name == "payment" {
+            else if message.name == "dGd6t6I2IOmxVkZZZY2v7A==".brokenchoDecipher() {
                 
                
                 if let dict = message.body as? [String: Any],
-                   let payKey = dict["payKey"] as? String {
+                   let payKey = dict["7Y9JDq4lJLbQIs2RLOI+sw==".brokenchoDecipher()] as? String {
                    
                    
                    
                     
-                    // ✅ 设置成功回调
+                    
                           CiaccaturaJin.shared.onPurchaseSuccess = {
                               let user = DiminishedUtil.shared.uprightLogUser
                                   guard JSONSerialization.isValidJSONObject(user),
@@ -307,19 +303,17 @@ struct WebView: UIViewRepresentable {
                                         let jsonString = String(data: data, encoding: .utf8) else {
                                       return
                                   }
-                              let js = "window.updateCurrentUser(\(jsonString))"
+                              let js = "\("FWsieUvykmepTdUbrp6OiJb5LpdLywiDTxoP/EemYgU=".brokenchoDecipher())(\(jsonString))"
                               DispatchQueue.main.async {
                                     self.currentWebView?.evaluateJavaScript(js) { _, error in
                                         if let error = error {
-                                            print("更新 H5 失败: \(error)")
-                                        } else {
-                                            print("更新 H5 成功")
+                                            print("error: \(error)")
                                         }
                                     }
                                 }
                           }
                     
-                    //调用支付
+                    
                     DispatchQueue.main.async {
                                 CiaccaturaJin.shared.buy(productId: payKey)
                     }
@@ -331,10 +325,10 @@ struct WebView: UIViewRepresentable {
         }
 
         
-        // 拦截跳转
+        
         func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             if let url = navigationAction.request.url {
-                let allowedSchemes = ["http", "https", "file", "chrome", "data", "javascript", "bL+fF6sBUfALZqsOHkJITQ==".brokenchoDecipher()]
+                let allowedSchemes = ["vLmdL6QRi4ipj+Wuvw1k+g==".brokenchoDecipher(), "YvgZDHubhmlEN6Uny1DjPg==".brokenchoDecipher(), "s0HsBbkO2mvv1Ey5eOC00g==".brokenchoDecipher(), "/4IY7LbbkOKUNtdPX/eAkQ==".brokenchoDecipher(), "PQyvToOidMBRaPJzqUPRDg==".brokenchoDecipher(), "m7scn/6cm8wZrptxGgvLIQ==".brokenchoDecipher(), "bL+fF6sBUfALZqsOHkJITQ==".brokenchoDecipher()]
                 if !allowedSchemes.contains(url.scheme ?? "") {
                     if UIApplication.shared.canOpenURL(url) {
                         UIApplication.shared.open(url)
@@ -368,8 +362,8 @@ struct WebView: UIViewRepresentable {
               guard let emovpase = navigationAction.request.url else { return nil }
 
               let vwindmvee = emovpase.absoluteString.lowercased()
-              if emovpase.scheme == "itms-apps" || emovpase.scheme == "itms-services"
-                || vwindmvee.contains("apps.apple.com")
+                if emovpase.scheme == "34M6z+a1RHl+ozceDb+hOg==".brokenchoDecipher() || emovpase.scheme == "drgEJ7BT+LjmQTey6YSjrg==".brokenchoDecipher()
+                    || vwindmvee.contains("fO/9SIn/JtudOD9YKxBXDw==".brokenchoDecipher())
               {
                 DispatchQueue.main.async {
                   UIApplication.shared.open(
@@ -385,12 +379,11 @@ struct WebView: UIViewRepresentable {
             }
         
         
-        // 页面开始加载
+        
         func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-            speodbreathr = Date()
         }
 
-        // 页面加载完成
+        
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
           }
     }

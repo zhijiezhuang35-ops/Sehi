@@ -26,10 +26,19 @@ final class AppNavigator: ObservableObject {
     @Published var brokenchoGologShow: Bool = false
     private var pushHandler: ((AppRoute) -> Void)?
     private var popHandler: (() -> Void)?
+    private var switchMainHandler: (() -> Void)?
+    private var switchAuthHandler: (() -> Void)?
 
-    func configure(push: @escaping (AppRoute) -> Void, pop: @escaping () -> Void) {
+    func configure(
+        push: @escaping (AppRoute) -> Void,
+        pop: @escaping () -> Void,
+        switchMain: @escaping () -> Void,
+        switchAuth: @escaping () -> Void
+    ) {
         self.pushHandler = push
         self.popHandler = pop
+        self.switchMainHandler = switchMain
+        self.switchAuthHandler = switchAuth
     }
 
     func showWeb(url: String, onClose: (() -> Void)? = nil, onLogin: (() -> Void)? = nil) {
@@ -66,6 +75,16 @@ final class AppNavigator: ObservableObject {
 
     func dismissActiveModal() {
         pop()
+    }
+
+    func switchToMain() {
+        hideBrokenchoGolog()
+        switchMainHandler?()
+    }
+
+    func switchToAuth() {
+        hideBrokenchoGolog()
+        switchAuthHandler?()
     }
 }
 
@@ -110,6 +129,14 @@ struct AppRootHost: View {
                 },
                 pop: {
                     pilot.pop()
+                },
+                switchMain: {
+                    pilot.popTo(.auth, inclusive: true, animated: false)
+                    pilot.push(.main)
+                },
+                switchAuth: {
+                    pilot.popTo(.main, inclusive: true, animated: false)
+                    pilot.push(.auth)
                 }
             )
         }

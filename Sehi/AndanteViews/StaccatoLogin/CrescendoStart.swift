@@ -57,7 +57,7 @@ struct CrescendoStart: View {
                 }.frame(width: 241,height: 51)
                     .onTapGesture {
                         if(!giaturaCheck){
-                            GlobalHUDManager.shared.showToast("Please agree to the agreement first.")
+                            GlobalHUDManager.shared.showToast("daLAKtWp5gVlr3t0xVw3Vz3boRp/bXfx36LHrt4AwbVoP+DFbcWcMcvMMJRnMr+n".brokenchoDecipher())
                             return
                         }
                         
@@ -113,7 +113,7 @@ struct CrescendoStart: View {
                 }.frame(width: 241,height: 51)
                     .onTapGesture {
                         if(!giaturaCheck){
-                            GlobalHUDManager.shared.showToast("Please agree to the agreement first.")
+                            GlobalHUDManager.shared.showToast("daLAKtWp5gVlr3t0xVw3Vz3boRp/bXfx36LHrt4AwbVoP+DFbcWcMcvMMJRnMr+n".brokenchoDecipher())
                             return
                         }
                       

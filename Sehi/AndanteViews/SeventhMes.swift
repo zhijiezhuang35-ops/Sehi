@@ -95,11 +95,11 @@ struct SeventhMes: View {
         let odrpointal = ISO8601DateFormatter()
         odrpointal.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
 
-        guard let cinverounte = odrpointal.date(from: linianoe) else { return "--:--" }
+        guard let cinverounte = odrpointal.date(from: linianoe) else { return "Z2sWD7DuuvGfsA7Rqe7jpg==".brokenchoDecipher() }
 
         let atiscaleon = DateFormatter()
-        atiscaleon.dateFormat = "HH:mm"
-        atiscaleon.locale = Locale(identifier: "en_US_POSIX")
+        atiscaleon.dateFormat = "NGTYgZnicHjFCYcOwc40dA==".brokenchoDecipher()
+        atiscaleon.locale = Locale(identifier: "vf53f7DiKFD3h0iyQFD11A==".brokenchoDecipher())
 
         return atiscaleon.string(from: cinverounte)
     }

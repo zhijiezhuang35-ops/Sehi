@@ -182,7 +182,7 @@ struct VibratoLogType: View {
                             RoundedRectangle(cornerRadius: 189)
                         ).onTapGesture {
                             if marcatoEmail == "" && tremoloPasw == "" {
-                                GlobalHUDManager.shared.showToast("Please improve the input box.")
+                                GlobalHUDManager.shared.showToast("JVsZzCVMV3d/qw0Om4bpOC7gnq7FLbaP0Vg9JI3WwCo=".brokenchoDecipher())
                                 return
                             }
                             
@@ -206,11 +206,11 @@ struct VibratoLogType: View {
                                         
                                         
                                         DiminishedUtil.shared.uprightLogUser = matchedUser
-                                        navigator.dismissActiveModal()
+                                        navigator.switchToMain()
                                         
                                         
                                     } else {
-                                        GlobalHUDManager.shared.showToast("Incorrect email or password")
+                                        GlobalHUDManager.shared.showToast("G34EUg0Taqi/hJroIfZVKJ3RogqvPMTBe6KYUlFqlGQ=".brokenchoDecipher())
                                         
                                     }
                                     GlobalHUDManager.shared.hideLoading()

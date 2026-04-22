@@ -69,7 +69,7 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
         GlobalHUDManager.shared.showLoading("loding...")
         
         guard SKPaymentQueue.canMakePayments() else {
-            GlobalHUDManager.shared.showToast("error.")
+            GlobalHUDManager.shared.showToast("CrQfDdJgnJbwk2X0qBZf/A==".brokenchoDecipher())
             GlobalHUDManager.shared.hideLoading()
             return
         }
@@ -80,7 +80,7 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
                 
                 
                 GlobalHUDManager.shared.hideLoading()
-                GlobalHUDManager.shared.showToast("The product was not found.")
+                GlobalHUDManager.shared.showToast("EDbUdnJcccgT5qhxVjS5O13kJrfxdm6KHHhVZlXY66o=".brokenchoDecipher())
                 return
             }
 
@@ -126,17 +126,17 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
                 onPurchaseSuccess?()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     
-                    GlobalHUDManager.shared.showToast("Payment successful")
+                    GlobalHUDManager.shared.showToast("wyCCMWlR5tRXPafbUcFGb9kAOuS5heBq99KmHd8xNUw=".brokenchoDecipher())
                 }
                 
                 
             case .failed:
               
-                print("error")
+               
                 SKPaymentQueue.default().finishTransaction(t)
                 GlobalHUDManager.shared.hideLoading()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    GlobalHUDManager.shared.showToast("Payment failed")
+                    GlobalHUDManager.shared.showToast("zrtaYcWLaSzPuIHYai8aGQ==".brokenchoDecipher())
                 }
             case .restored:
                

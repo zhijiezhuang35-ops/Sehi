@@ -204,8 +204,6 @@ struct AllegrettoHome: View {
             
             
                 
-        }.onAppear{
-            print(DiminishedUtil.shared.uprightLogUser)
         }
     }
 }
