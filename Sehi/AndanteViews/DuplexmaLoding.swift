@@ -29,22 +29,20 @@ struct GlobalToastView: View {
     let message: String
     
     var body: some View {
-        VStack {
-            Spacer()
-            
-            Text(message)
-                .font(.system(size: 14, weight: .medium))
-                .foregroundColor(.white)
-                .multilineTextAlignment(.center)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 12)
-                .background(Color.black.opacity(0.85))
-                .cornerRadius(10)
-                .padding(.bottom, 120)
-        }
-        .padding(.horizontal, 24)
-        .background(Color.clear)
-        .ignoresSafeArea()
+        ZStack {
+                   Color.clear
+                       .ignoresSafeArea()
+                   
+                   Text(message)
+                       .font(.system(size: 14, weight: .medium))
+                       .foregroundColor(.white)
+                       .multilineTextAlignment(.center)
+                       .padding(.horizontal, 20)
+                       .padding(.vertical, 12)
+                       .background(Color.black.opacity(0.85))
+                       .cornerRadius(10)
+               }
+               .ignoresSafeArea()
     }
 }
 

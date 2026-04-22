@@ -192,7 +192,7 @@ struct VibratoLogType: View {
                                 GlobalHUDManager.shared.showLoading()
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
-                                    GlobalHUDManager.shared.hideLoading()
+                                    
                                     let melodicUsers = MelodicUsers()
                                     melodicUsers.loadResults()
                                     
@@ -213,6 +213,7 @@ struct VibratoLogType: View {
                                         GlobalHUDManager.shared.showToast("Incorrect email or password")
                                         
                                     }
+                                    GlobalHUDManager.shared.hideLoading()
                                 }
                             }else if hromaticType == "1" {
                                 DiminishedUtil.shared.articulatEmail = marcatoEmail
