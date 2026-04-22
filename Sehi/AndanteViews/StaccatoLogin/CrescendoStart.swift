@@ -57,7 +57,7 @@ struct CrescendoStart: View {
                 }.frame(width: 241,height: 51)
                     .onTapGesture {
                         if(!giaturaCheck){
-                            GlobalHUDManager.shared.showToast("daLAKtWp5gVlr3t0xVw3Vz3boRp/bXfx36LHrt4AwbVoP+DFbcWcMcvMMJRnMr+n".brokenchoDecipher())
+                            MordentNimbusKeeper.shared.whisperStaccato("daLAKtWp5gVlr3t0xVw3Vz3boRp/bXfx36LHrt4AwbVoP+DFbcWcMcvMMJRnMr+n".brokenchoDecipher())
                             return
                         }
                         
@@ -66,7 +66,7 @@ struct CrescendoStart: View {
                             return
                         }
                         
-                        GlobalHUDManager.shared.showLoading()
+                        MordentNimbusKeeper.shared.presentNocturne()
                             
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                                 let melodicUsers = MelodicUsers()
@@ -75,7 +75,7 @@ struct CrescendoStart: View {
                                     DiminishedUtil.shared.uprightLogUser = user
                                 }
                                 
-                                GlobalHUDManager.shared.hideLoading()
+                                MordentNimbusKeeper.shared.releaseNocturne()
                                 navigator.dismissActiveModal()
                             }
                     }
@@ -113,7 +113,7 @@ struct CrescendoStart: View {
                 }.frame(width: 241,height: 51)
                     .onTapGesture {
                         if(!giaturaCheck){
-                            GlobalHUDManager.shared.showToast("daLAKtWp5gVlr3t0xVw3Vz3boRp/bXfx36LHrt4AwbVoP+DFbcWcMcvMMJRnMr+n".brokenchoDecipher())
+                            MordentNimbusKeeper.shared.whisperStaccato("daLAKtWp5gVlr3t0xVw3Vz3boRp/bXfx36LHrt4AwbVoP+DFbcWcMcvMMJRnMr+n".brokenchoDecipher())
                             return
                         }
                       

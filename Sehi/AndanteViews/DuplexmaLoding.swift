@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct GlobalLoadingView: View {
+struct TremolandoVeilView: View {
     let message: String
     
     var body: some View {
@@ -25,7 +25,7 @@ struct GlobalLoadingView: View {
     }
 }
 
-struct GlobalToastView: View {
+struct SforzandoHintView: View {
     let message: String
     
     var body: some View {
@@ -48,67 +48,65 @@ struct GlobalToastView: View {
 
 import UIKit
 
-final class PassThroughWindow: UIWindow {
+final class LeggieroGlassWindow: UIWindow {
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let view = super.hitTest(point, with: event)
         return view == rootViewController?.view ? nil : view
     }
 }
 
-final class GlobalHUDManager {
-    static let shared = GlobalHUDManager()
+final class MordentNimbusKeeper {
+    static let shared = MordentNimbusKeeper()
     
     private init() {}
     
-    // MARK: - Loading
-    private var loadingWindow: UIWindow?
-    private var loadingHosting: UIHostingController<GlobalLoadingView>?
-    private var loadingCount: Int = 0
+    private var nocturneWindow: UIWindow?
+    private var nocturneHosting: UIHostingController<TremolandoVeilView>?
+    private var nocturneDepth: Int = 0
     
-    // MARK: - Toast
-    private var toastWindow: PassThroughWindow?
-    private var toastHosting: UIHostingController<GlobalToastView>?
-    private var hideToastWorkItem: DispatchWorkItem?
+    private var staccatoWindow: LeggieroGlassWindow?
+    private var staccatoHosting: UIHostingController<SforzandoHintView>?
+    private var staccatoDismissTask: DispatchWorkItem?
 }
 
-extension GlobalHUDManager {
+extension MordentNimbusKeeper {
     
-    func showLoading(_ text: String = "Loading...") {
+    func presentNocturne(_ text: String = "Loading...") {
         DispatchQueue.main.async {
-            self.loadingCount += 1
+            self.nocturneDepth += 1
             
-            if self.loadingWindow == nil {
-                self.createLoadingWindow(message: text)
+            if self.nocturneWindow == nil {
+                self.forgeNocturneWindow(message: text)
             } else {
-                self.loadingHosting?.rootView = GlobalLoadingView(message: text)
+                self.nocturneHosting?.rootView = TremolandoVeilView(message: text)
             }
             
-            self.loadingWindow?.isHidden = false
+            self.nocturneWindow?.isHidden = false
         }
     }
     
-    func hideLoading() {
+    func releaseNocturne() {
         DispatchQueue.main.async {
-            self.loadingCount = max(0, self.loadingCount - 1)
+            self.nocturneDepth = max(0, self.nocturneDepth - 1)
             
-            if self.loadingCount == 0 {
-                self.loadingWindow?.isHidden = true
-                self.loadingWindow = nil
-                self.loadingHosting = nil
+            if self.nocturneDepth == 0 {
+                self.nocturneWindow?.isHidden = true
+                self.nocturneWindow = nil
+                self.nocturneHosting = nil
             }
         }
     }
     
-    func forceHideLoading() {
+    func silenceNocturne() {
         DispatchQueue.main.async {
-            self.loadingCount = 0
-            self.loadingWindow?.isHidden = true
-            self.loadingWindow = nil
-            self.loadingHosting = nil
+            self.nocturneDepth = 0
+            self.nocturneWindow?.isHidden = true
+            self.nocturneWindow = nil
+            self.nocturneHosting = nil
         }
     }
     
-    private func createLoadingWindow(message: String) {
+    private func forgeNocturneWindow(message: String) {
         guard let scene = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .first(where: { $0.activationState == .foregroundActive }) else { return }
@@ -117,64 +115,64 @@ extension GlobalHUDManager {
         window.backgroundColor = .clear
         window.windowLevel = .alert + 1
         
-        let hosting = UIHostingController(rootView: GlobalLoadingView(message: message))
+        let hosting = UIHostingController(rootView: TremolandoVeilView(message: message))
         hosting.view.backgroundColor = .clear
         
         window.rootViewController = hosting
         
-        self.loadingWindow = window
-        self.loadingHosting = hosting
+        self.nocturneWindow = window
+        self.nocturneHosting = hosting
     }
 }
 
-extension GlobalHUDManager {
+extension MordentNimbusKeeper {
     
-    func showToast(_ text: String, duration: TimeInterval = 2.0) {
+    func whisperStaccato(_ text: String, duration: TimeInterval = 2.0) {
         DispatchQueue.main.async {
-            self.hideToastWorkItem?.cancel()
+            self.staccatoDismissTask?.cancel()
             
-            if self.toastWindow == nil {
-                self.createToastWindow(message: text)
+            if self.staccatoWindow == nil {
+                self.forgeStaccatoWindow(message: text)
             } else {
-                self.toastHosting?.rootView = GlobalToastView(message: text)
+                self.staccatoHosting?.rootView = SforzandoHintView(message: text)
             }
             
-            self.toastWindow?.isHidden = false
+            self.staccatoWindow?.isHidden = false
             
             let workItem = DispatchWorkItem { [weak self] in
-                self?.hideToast()
+                self?.hushStaccato()
             }
-            self.hideToastWorkItem = workItem
+            self.staccatoDismissTask = workItem
             
             DispatchQueue.main.asyncAfter(deadline: .now() + duration, execute: workItem)
         }
     }
     
-    func hideToast() {
+    func hushStaccato() {
         DispatchQueue.main.async {
-            self.hideToastWorkItem?.cancel()
-            self.hideToastWorkItem = nil
-            self.toastWindow?.isHidden = true
-            self.toastWindow = nil
-            self.toastHosting = nil
+            self.staccatoDismissTask?.cancel()
+            self.staccatoDismissTask = nil
+            self.staccatoWindow?.isHidden = true
+            self.staccatoWindow = nil
+            self.staccatoHosting = nil
         }
     }
     
-    private func createToastWindow(message: String) {
+    private func forgeStaccatoWindow(message: String) {
         guard let scene = UIApplication.shared.connectedScenes
             .compactMap({ $0 as? UIWindowScene })
             .first(where: { $0.activationState == .foregroundActive }) else { return }
         
-        let window = PassThroughWindow(windowScene: scene)
+        let window = LeggieroGlassWindow(windowScene: scene)
         window.backgroundColor = .clear
         window.windowLevel = .alert + 2
         
-        let hosting = UIHostingController(rootView: GlobalToastView(message: message))
+        let hosting = UIHostingController(rootView: SforzandoHintView(message: message))
         hosting.view.backgroundColor = .clear
         
         window.rootViewController = hosting
         
-        self.toastWindow = window
-        self.toastHosting = hosting
+        self.staccatoWindow = window
+        self.staccatoHosting = hosting
     }
 }

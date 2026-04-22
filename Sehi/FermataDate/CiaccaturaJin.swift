@@ -66,11 +66,11 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
 
     
     func buy(productId: String) {
-        GlobalHUDManager.shared.showLoading("loding...")
+        MordentNimbusKeeper.shared.presentNocturne("loding...")
         
         guard SKPaymentQueue.canMakePayments() else {
-            GlobalHUDManager.shared.showToast("CrQfDdJgnJbwk2X0qBZf/A==".brokenchoDecipher())
-            GlobalHUDManager.shared.hideLoading()
+            MordentNimbusKeeper.shared.whisperStaccato("CrQfDdJgnJbwk2X0qBZf/A==".brokenchoDecipher())
+            MordentNimbusKeeper.shared.releaseNocturne()
             return
         }
 
@@ -79,8 +79,8 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
             guard let product = product else {
                 
                 
-                GlobalHUDManager.shared.hideLoading()
-                GlobalHUDManager.shared.showToast("EDbUdnJcccgT5qhxVjS5O13kJrfxdm6KHHhVZlXY66o=".brokenchoDecipher())
+                MordentNimbusKeeper.shared.releaseNocturne()
+                MordentNimbusKeeper.shared.whisperStaccato("EDbUdnJcccgT5qhxVjS5O13kJrfxdm6KHHhVZlXY66o=".brokenchoDecipher())
                 return
             }
 
@@ -90,12 +90,27 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
     }
     
     func sustainBack(tuningkey: String) -> Int {
-        
         switch tuningkey {
-        case "lvbsvhxcgcrvesor":
+        case "gljfanuyeelqeqbn":
             return 400
-        case "dxismgcwewhrtezo":
+        case "vzyysjycqrvbzvfg":
+            return 800
+        case "zpeyqotbmhvzsexj":
+            return 2190
+        case "kytlcnljblywizzx":
             return 2450
+        case "teqzpbymoxzvhsej":
+            return 3950
+        case "vddfnfcslvxrsktk":
+            return 4900
+        case "bzqvexoymptzshje":
+            return 5700
+        case "qomyvszxteepbhzj":
+            return 9800
+        case "wowqeqfjvvmhibcn":
+            return 24500
+        case "xbgbbeotwfxkqdka":
+            return 49000
         default:
             return 0
         }
@@ -108,7 +123,7 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
             switch t.transactionState {
 
             case .purchased:
-                GlobalHUDManager.shared.hideLoading()
+                MordentNimbusKeeper.shared.releaseNocturne()
                 
                 SKPaymentQueue.default().finishTransaction(t)
                 
@@ -126,7 +141,7 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
                 onPurchaseSuccess?()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                     
-                    GlobalHUDManager.shared.showToast("wyCCMWlR5tRXPafbUcFGb9kAOuS5heBq99KmHd8xNUw=".brokenchoDecipher())
+                    MordentNimbusKeeper.shared.whisperStaccato("wyCCMWlR5tRXPafbUcFGb9kAOuS5heBq99KmHd8xNUw=".brokenchoDecipher())
                 }
                 
                 
@@ -134,14 +149,14 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
               
                
                 SKPaymentQueue.default().finishTransaction(t)
-                GlobalHUDManager.shared.hideLoading()
+                MordentNimbusKeeper.shared.releaseNocturne()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    GlobalHUDManager.shared.showToast("zrtaYcWLaSzPuIHYai8aGQ==".brokenchoDecipher())
+                    MordentNimbusKeeper.shared.whisperStaccato("zrtaYcWLaSzPuIHYai8aGQ==".brokenchoDecipher())
                 }
             case .restored:
                
                 SKPaymentQueue.default().finishTransaction(t)
-                GlobalHUDManager.shared.hideLoading()
+                MordentNimbusKeeper.shared.releaseNocturne()
 
             case .purchasing:
                 break
@@ -158,5 +173,4 @@ extension CiaccaturaJin: SKPaymentTransactionObserver {
     
     
 }
-
 

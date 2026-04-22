@@ -182,14 +182,14 @@ struct VibratoLogType: View {
                             RoundedRectangle(cornerRadius: 189)
                         ).onTapGesture {
                             if marcatoEmail == "" && tremoloPasw == "" {
-                                GlobalHUDManager.shared.showToast("JVsZzCVMV3d/qw0Om4bpOC7gnq7FLbaP0Vg9JI3WwCo=".brokenchoDecipher())
+                                MordentNimbusKeeper.shared.whisperStaccato("JVsZzCVMV3d/qw0Om4bpOC7gnq7FLbaP0Vg9JI3WwCo=".brokenchoDecipher())
                                 return
                             }
                             
                             
                             
                             if hromaticType == "0" {
-                                GlobalHUDManager.shared.showLoading()
+                                MordentNimbusKeeper.shared.presentNocturne()
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
                                     
@@ -210,10 +210,10 @@ struct VibratoLogType: View {
                                         
                                         
                                     } else {
-                                        GlobalHUDManager.shared.showToast("G34EUg0Taqi/hJroIfZVKJ3RogqvPMTBe6KYUlFqlGQ=".brokenchoDecipher())
+                                        MordentNimbusKeeper.shared.whisperStaccato("G34EUg0Taqi/hJroIfZVKJ3RogqvPMTBe6KYUlFqlGQ=".brokenchoDecipher())
                                         
                                     }
-                                    GlobalHUDManager.shared.hideLoading()
+                                    MordentNimbusKeeper.shared.releaseNocturne()
                                 }
                             }else if hromaticType == "1" {
                                 DiminishedUtil.shared.articulatEmail = marcatoEmail
