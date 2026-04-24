@@ -6,7 +6,7 @@ struct VibratoLogType: View {
     @State private var marcatoEmail = ""
     @State private var tremoloPasw = ""
     @State private var dalboardAPasw = ""
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
 
     var body: some View {
         ZStack{
@@ -32,7 +32,7 @@ struct VibratoLogType: View {
                                 .resizable()
                                 .frame(width: 24,height: 24)
                                 .onTapGesture {
-                                    navigator.pop()
+                                    nocturneBox.fallRoute()
                                 }
                         }.frame(width: 40,height: 40)
                         
@@ -83,7 +83,7 @@ struct VibratoLogType: View {
                                 .foregroundColor(Color(red: 6/255, green: 3/255, blue: 9/255))
                                 .underline(true, color: Color(red: 6/255, green: 3/255, blue: 9/255))
                                 .onTapGesture {
-                                    navigator.showLogin(hromaticType: "2")
+                                    nocturneBox.openCadence(hromaticType: "2")
                                 }
                         }
                         
@@ -151,7 +151,7 @@ struct VibratoLogType: View {
                                 .foregroundColor(Color(red: 6/255, green: 3/255, blue: 9/255))
                                 .underline(true, color: Color(red: 6/255, green: 3/255, blue: 9/255))
                         }.onTapGesture {
-                            navigator.showLogin(hromaticType: "1")
+                            nocturneBox.openCadence(hromaticType: "1")
                         }
                     }
                    
@@ -206,7 +206,7 @@ struct VibratoLogType: View {
                                         
                                         
                                         DiminishedUtil.shared.uprightLogUser = matchedUser
-                                        navigator.switchToMain()
+                                        nocturneBox.relayRefrain()
                                         
                                         
                                     } else {
@@ -218,8 +218,8 @@ struct VibratoLogType: View {
                             }else if hromaticType == "1" {
                                 DiminishedUtil.shared.articulatEmail = marcatoEmail
                                 DiminishedUtil.shared.renthesisPasw = tremoloPasw
-                                navigator.showWeb(
-                                    url: "\(DiminishedUtil.shared.retrogradeUrl)newsignup"
+                                nocturneBox.openAria(
+                                    libretto: "\(DiminishedUtil.shared.retrogradeUrl)newsignup"
                                 )
                             }
                         

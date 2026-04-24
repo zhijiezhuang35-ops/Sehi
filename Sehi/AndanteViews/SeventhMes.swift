@@ -2,7 +2,7 @@
 import SwiftUI
 struct SeventhMes: View {
     @State private var diminutList : [[String:Any]] = StrikingChat().getMechanism()
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     var body: some View {
         ZStack{
             Image("sehi_backgrck")
@@ -70,9 +70,9 @@ struct SeventhMes: View {
                              .cornerRadius(15)
                              .contentShape(Rectangle())
                              .onTapGesture{
-                                 navigator.showWeb(
-                                     url: "\(DiminishedUtil.shared.retrogradeUrl)chat/\((diminutList[index]["tGdWtMKclDg1xfdBAgMIUg==".brokenchoDecipher()] as? String) ?? "")",
-                                     onClose: {
+                                 nocturneBox.openAria(
+                                     libretto: "\(DiminishedUtil.shared.retrogradeUrl)chat/\((diminutList[index]["tGdWtMKclDg1xfdBAgMIUg==".brokenchoDecipher()] as? String) ?? "")",
+                                     coda: {
                                          diminutList = StrikingChat().getMechanism()
                                      }
                                  )

@@ -3,7 +3,7 @@ import SwiftUI
 
 struct AllegrettoHome: View {
     @State private var rtamentoType:Bool = true
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     @State private var intonationList : [[String:Any]] = OstinatoPosts().getImagePosts()
     
     var dipoappList: [[String: Any]] {
@@ -79,11 +79,11 @@ struct AllegrettoHome: View {
                             .offset(y:17)
                             .onTapGesture {
                                 if((DiminishedUtil.shared.uprightLogUser["QKPnWrCiuJJ5oWaPS7kOLQ==".brokenchoDecipher()] as? Int) ?? 0 == 1){
-                                    navigator.showBrokenchoGolog()
+                                    nocturneBox.unveilRubatoCurtain()
                                     return
                                 }
-                                navigator.showWeb(
-                                    url: "\(DiminishedUtil.shared.retrogradeUrl)aiDetails"
+                                nocturneBox.openAria(
+                                    libretto: "\(DiminishedUtil.shared.retrogradeUrl)aiDetails"
                                 )
                             }
                        
@@ -186,14 +186,14 @@ struct AllegrettoHome: View {
                 .contentShape(Rectangle())
                 .onTapGesture {
                     if((DiminishedUtil.shared.uprightLogUser["QKPnWrCiuJJ5oWaPS7kOLQ==".brokenchoDecipher()] as? Int) ?? 0 == 1){
-                        navigator.showBrokenchoGolog()
+                        nocturneBox.unveilRubatoCurtain()
                         return
                     }
                     
-                    navigator.showWeb(
-                        url: "\(DiminishedUtil.shared.retrogradeUrl)publishPicPost",
-                        onLogin: {
-                            navigator.showLogin(hromaticType: "0")
+                    nocturneBox.openAria(
+                        libretto: "\(DiminishedUtil.shared.retrogradeUrl)publishPicPost",
+                        encore: {
+                            nocturneBox.openCadence(hromaticType: "0")
                         }
                     )
                 }
@@ -211,7 +211,7 @@ struct AllegrettoHome: View {
 //子项
 struct PianissimoItem: View {
     let diameterItem : [String:Any]
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     @ObservedObject var diminishedUtil = DiminishedUtil.shared
     var legatoUs: [String: Any]? {
         MelodicUsers().getAugmente(by: diameterItem["TdVWE+5f7Onr0F+4iwfPVw==".brokenchoDecipher()] as? String ?? "")
@@ -324,10 +324,10 @@ struct PianissimoItem: View {
             
              
              
-             navigator.showWeb(
-                 url: "\(DiminishedUtil.shared.retrogradeUrl)picPostDetails/\((diameterItem["i7mt2GXHjk15k1arw8Jwvw==".brokenchoDecipher()] as? String) ?? "")",
-                 onLogin: {
-                     navigator.showLogin(hromaticType: "0")
+             nocturneBox.openAria(
+                 libretto: "\(DiminishedUtil.shared.retrogradeUrl)picPostDetails/\((diameterItem["i7mt2GXHjk15k1arw8Jwvw==".brokenchoDecipher()] as? String) ?? "")",
+                 encore: {
+                     nocturneBox.openCadence(hromaticType: "0")
                  }
              )
          }

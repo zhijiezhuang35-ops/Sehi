@@ -3,7 +3,7 @@ import SwiftUI
 
 struct CrescendoStart: View {
     @State private var giaturaCheck = false
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     @State private var arpeggioShow = false
     var body: some View {
         ZStack{
@@ -76,7 +76,7 @@ struct CrescendoStart: View {
                                 }
                                 
                                 MordentNimbusKeeper.shared.releaseNocturne()
-                                navigator.dismissActiveModal()
+                                nocturneBox.foldCurrentCurtain()
                             }
                     }
                 Spacer().frame(height: 20)
@@ -122,7 +122,7 @@ struct CrescendoStart: View {
                             arpeggioShow = true
                             return
                         }
-                        navigator.showLogin(hromaticType: "0")
+                        nocturneBox.openCadence(hromaticType: "0")
                     }
                 
                 Spacer().frame(height: 68)
@@ -153,8 +153,8 @@ struct CrescendoStart: View {
                         .foregroundColor(.black)
                         .underline(true, color: .black)
                         .onTapGesture {
-                            navigator.showWeb(
-                                url: "\(DiminishedUtil.shared.retrogradeUrl)userAgreement"
+                            nocturneBox.openAria(
+                                libretto: "\(DiminishedUtil.shared.retrogradeUrl)userAgreement"
                             )
                         }
                     Text(" and ")
@@ -165,8 +165,8 @@ struct CrescendoStart: View {
                         .foregroundColor(.black)
                         .underline(true, color: .black)
                         .onTapGesture {
-                            navigator.showWeb(
-                                url: "\(DiminishedUtil.shared.retrogradeUrl)privacyPolicy"
+                            nocturneBox.openAria(
+                                libretto: "\(DiminishedUtil.shared.retrogradeUrl)privacyPolicy"
                             )
                         }
                 }

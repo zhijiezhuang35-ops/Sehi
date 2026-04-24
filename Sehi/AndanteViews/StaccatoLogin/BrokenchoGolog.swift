@@ -2,7 +2,7 @@ import SwiftUI
 
 struct BrokenchoGolog: View {
     @Binding var bactShow: Bool
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     var onLogin: (() -> Void)? = nil
 
     var body: some View {
@@ -10,7 +10,7 @@ struct BrokenchoGolog: View {
             Color.black.opacity(0.45)
                 .ignoresSafeArea()
                 .onTapGesture {
-                    navigator.hideBrokenchoGolog()
+                    nocturneBox.concealRubatoCurtain()
                 }
 
             VStack(spacing: 0) {
@@ -87,4 +87,3 @@ struct BrokenchoGolog: View {
         }
     }
 }
-

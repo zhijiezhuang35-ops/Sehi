@@ -10,7 +10,7 @@ struct SehiApp: App {
         }
     var body: some Scene {
         WindowGroup {
-            AppRootHost(isLoggedIn: !diminishedUtil.uprightLogUser.isEmpty)
+            NocturneRootHost(isLegatoSigned: !diminishedUtil.uprightLogUser.isEmpty)
                 .ignoresSafeArea()
                 .id(diminishedUtil.uprightLogUser.isEmpty)
         }

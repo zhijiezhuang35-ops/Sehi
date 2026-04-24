@@ -2,7 +2,7 @@ import SwiftUI
 struct HarmonicDiscover: View {
     @State private var rtamentoType:Bool = true
     @State private var fallboardList : [[String:Any]] = OstinatoPosts().getVideoPosts()
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     @ObservedObject var diminishedUtil = DiminishedUtil.shared
     
     var pinsoundList: [[String: Any]] {
@@ -149,10 +149,10 @@ struct HarmonicDiscover: View {
                                 }.padding(.horizontal,20)
                                 .contentShape(Rectangle())
                                 .onTapGesture {
-                                    navigator.showWeb(
-                                        url: "\(diminishedUtil.retrogradeUrl)videoPostDetails/\((pinsoundList[index]["i7mt2GXHjk15k1arw8Jwvw==".brokenchoDecipher()] as? String) ?? "")",
-                                        onLogin: {
-                                            navigator.showLogin(hromaticType: "0")
+                                    nocturneBox.openAria(
+                                        libretto: "\(diminishedUtil.retrogradeUrl)videoPostDetails/\((pinsoundList[index]["i7mt2GXHjk15k1arw8Jwvw==".brokenchoDecipher()] as? String) ?? "")",
+                                        encore: {
+                                            nocturneBox.openCadence(hromaticType: "0")
                                         }
                                     )
                                 }
@@ -199,11 +199,11 @@ struct HarmonicDiscover: View {
                         .contentShape(Rectangle())
                         .onTapGesture {
                             if((DiminishedUtil.shared.uprightLogUser["QKPnWrCiuJJ5oWaPS7kOLQ==".brokenchoDecipher()] as? Int) ?? 0 == 1){
-                                navigator.showBrokenchoGolog()
+                                nocturneBox.unveilRubatoCurtain()
                                 return
                             }
-                            navigator.showWeb(
-                                url: "\(DiminishedUtil.shared.retrogradeUrl)publishVideoPost"
+                            nocturneBox.openAria(
+                                libretto: "\(DiminishedUtil.shared.retrogradeUrl)publishVideoPost"
                             )
                         }
                         .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .bottomTrailing)

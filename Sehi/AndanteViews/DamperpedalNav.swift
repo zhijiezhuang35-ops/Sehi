@@ -4,7 +4,7 @@ import SwiftUI
 struct DamperpedalNav: View {
     
     @State private var selectedTab = 0
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     var body: some View {
         ZStack(alignment: .bottom) {
             
@@ -29,9 +29,9 @@ struct DamperpedalNav: View {
             
             CustomTabBar(selectedTab: $selectedTab)
             
-            if navigator.brokenchoGologShow {
-                BrokenchoGolog(bactShow: $navigator.brokenchoGologShow) {
-                    navigator.showLogin(hromaticType: "0")
+            if nocturneBox.rubatoCurtainShow {
+                BrokenchoGolog(bactShow: $nocturneBox.rubatoCurtainShow) {
+                    nocturneBox.openCadence(hromaticType: "0")
                 }
             }
         }
@@ -42,7 +42,7 @@ struct DamperpedalNav: View {
 struct CustomTabBar: View {
     
     @Binding var selectedTab: Int
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     var body: some View {
         VStack(spacing: 0) {
             
@@ -69,7 +69,7 @@ struct CustomTabBar: View {
         Button {
            
             if((DiminishedUtil.shared.uprightLogUser["QKPnWrCiuJJ5oWaPS7kOLQ==".brokenchoDecipher()] as? Int) ?? 0 == 1 && index > 1){
-                navigator.showBrokenchoGolog()
+                nocturneBox.unveilRubatoCurtain()
                 return
             }
             
@@ -93,7 +93,7 @@ struct CustomTabBar: View {
     func profileTab() -> some View {
         Button {
             if((DiminishedUtil.shared.uprightLogUser["QKPnWrCiuJJ5oWaPS7kOLQ==".brokenchoDecipher()] as? Int) ?? 0 == 1 ){
-                navigator.showBrokenchoGolog()
+                nocturneBox.unveilRubatoCurtain()
                 return
             }
             selectedTab = 3

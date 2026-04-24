@@ -2,7 +2,7 @@ import SwiftUI
 struct SostenutoMine: View {
     @ObservedObject var diminishedUtil = DiminishedUtil.shared
     @State private var intonationList : [[String:Any]] = OstinatoPosts().getUnterchange()
-    @EnvironmentObject private var navigator: AppNavigator
+    @EnvironmentObject private var nocturneBox: NocturneBox
     var body: some View {
         ZStack{
             Image("sehi_backgrck")
@@ -67,8 +67,8 @@ struct SostenutoMine: View {
                                     .resizable()
                                     .frame(width:24,height: 24)
                                     .onTapGesture {
-                                        navigator.showWeb(
-                                            url: "\(DiminishedUtil.shared.retrogradeUrl)setting"
+                                        nocturneBox.openAria(
+                                            libretto: "\(DiminishedUtil.shared.retrogradeUrl)setting"
                                         )
                                     }
                                 Spacer()
@@ -93,8 +93,8 @@ struct SostenutoMine: View {
                                     .font(.system(size: 14, weight: .regular))
                                     .foregroundColor(Color(red: 6/255, green: 3/255, blue: 9/255))
                             }.onTapGesture {
-                                navigator.showWeb(
-                                    url: "\(DiminishedUtil.shared.retrogradeUrl)fan"
+                                nocturneBox.openAria(
+                                    libretto: "\(DiminishedUtil.shared.retrogradeUrl)fan"
                                 )
                             }
                             VStack{
@@ -105,8 +105,8 @@ struct SostenutoMine: View {
                                     .font(.system(size: 14, weight: .regular))
                                     .foregroundColor(Color(red: 6/255, green: 3/255, blue: 9/255))
                             }.onTapGesture {
-                                navigator.showWeb(
-                                    url: "\(DiminishedUtil.shared.retrogradeUrl)follow"
+                                nocturneBox.openAria(
+                                    libretto: "\(DiminishedUtil.shared.retrogradeUrl)follow"
                                 )
                             }
                         }
@@ -130,8 +130,8 @@ struct SostenutoMine: View {
                         }
                         .frame(height: 78)
                         .onTapGesture {
-                            navigator.showWeb(
-                                url: "\(DiminishedUtil.shared.retrogradeUrl)coins"
+                            nocturneBox.openAria(
+                                libretto: "\(DiminishedUtil.shared.retrogradeUrl)coins"
                             )
                         }
                         .padding(.bottom,8)
