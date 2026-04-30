@@ -4,7 +4,8 @@ version: 2.1
 jobs:
   build-and-upload:
     macos:
-      xcode: "16.4.0"
+      xcode: "26.5.0"
+    resource_class: m4pro.medium
 
     environment:
       BUNDLE_PATH: vendor/bundle
