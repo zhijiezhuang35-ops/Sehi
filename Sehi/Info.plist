@@ -2,6 +2,45 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1322159793115218</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>1322159793115218</string>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>FacebookClientToken</key>
+	<string>8ee79667b0920a082da10ff866d0a983</string>
+	<key>FacebookDisplayName</key>
+	<string>Sehi</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>cashme</string>
+		<string>paytmmp</string>
+		<string>upi</string>
+		<string>com.amazon.mobile.shopping</string>
+		<string>gpay</string>
+		<string>phonepe</string>
+		<string>mobikwik</string>
+		<string>freecharge</string>
+		<string>mqq</string>
+		<string>tweetie</string>
+		<string>alipay</string>
+		<string>comgooglemaps</string>
+		<string>tiktok</string>
+		<string>instagram</string>
+		<string>itms-apps</string>
+		<string>whatsapp</string>
+		<string>itms-services</string>
+		<string>fb</string>
+		<string>wechat</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<false/>
 </dict>

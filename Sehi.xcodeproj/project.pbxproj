@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD8D70572FA094FE00A3E3F8 /* ScreenShield in Frameworks */ = {isa = PBXBuildFile; productRef = DD8D70562FA094FE00A3E3F8 /* ScreenShield */; };
+		DD8D705A2FA09A4800A3E3F8 /* FacebookAEM in Frameworks */ = {isa = PBXBuildFile; productRef = DD8D70592FA09A4800A3E3F8 /* FacebookAEM */; };
+		DD8D705C2FA09A4800A3E3F8 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = DD8D705B2FA09A4800A3E3F8 /* FacebookCore */; };
 		DDB72CFD2F989B2B0049CF35 /* UIPilot in Frameworks */ = {isa = PBXBuildFile; productRef = DDB72CFC2F989B2B0049CF35 /* UIPilot */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8D705A2FA09A4800A3E3F8 /* FacebookAEM in Frameworks */,
 				DDB72CFD2F989B2B0049CF35 /* UIPilot in Frameworks */,
+				DD8D70572FA094FE00A3E3F8 /* ScreenShield in Frameworks */,
+				DD8D705C2FA09A4800A3E3F8 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,9 @@
 			name = Sehi;
 			packageProductDependencies = (
 				DDB72CFC2F989B2B0049CF35 /* UIPilot */,
+				DD8D70562FA094FE00A3E3F8 /* ScreenShield */,
+				DD8D70592FA09A4800A3E3F8 /* FacebookAEM */,
+				DD8D705B2FA09A4800A3E3F8 /* FacebookCore */,
 			);
 			productName = Sehi;
 			productReference = DD4D760F2F8626170015F9F5 /* Sehi.app */;
@@ -115,6 +124,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				DDB72CFB2F989B2B0049CF35 /* XCRemoteSwiftPackageReference "UIPilot" */,
+				DD8D70552FA094FE00A3E3F8 /* XCRemoteSwiftPackageReference "ScreenShield" */,
+				DD8D70582FA09A4800A3E3F8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DD4D76102F8626170015F9F5 /* Products */;
@@ -273,8 +284,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sehi/Sehi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -293,7 +305,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.voicing.sehi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -311,8 +323,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sehi/Sehi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -331,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.voicing.sehi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -368,6 +381,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DD8D70552FA094FE00A3E3F8 /* XCRemoteSwiftPackageReference "ScreenShield" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JayantBadlani/ScreenShield";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+		DD8D70582FA09A4800A3E3F8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		DDB72CFB2F989B2B0049CF35 /* XCRemoteSwiftPackageReference "UIPilot" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/canopas/UIPilot";
@@ -379,6 +408,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DD8D70562FA094FE00A3E3F8 /* ScreenShield */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD8D70552FA094FE00A3E3F8 /* XCRemoteSwiftPackageReference "ScreenShield" */;
+			productName = ScreenShield;
+		};
+		DD8D70592FA09A4800A3E3F8 /* FacebookAEM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD8D70582FA09A4800A3E3F8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookAEM;
+		};
+		DD8D705B2FA09A4800A3E3F8 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD8D70582FA09A4800A3E3F8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
 		DDB72CFC2F989B2B0049CF35 /* UIPilot */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DDB72CFB2F989B2B0049CF35 /* XCRemoteSwiftPackageReference "UIPilot" */;

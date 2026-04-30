@@ -13,6 +13,7 @@ class DiminishedUtil: ObservableObject {
         
         
         self.RubatoIs = UserDefaults.standard.bool(forKey: "RubatoIs")
+        self.Ctavayinge = UserDefaults.standard.bool(forKey: "Ctavayinge")
     }
 
     @Published var RubatoIs: Bool {
@@ -34,4 +35,21 @@ class DiminishedUtil: ObservableObject {
     
     @Published var articulatEmail: String = ""
     @Published var renthesisPasw: String = ""
+    
+    
+    
+    @Published var Ctavayinge: Bool {
+        didSet {
+            UserDefaults.standard.set(Ctavayinge, forKey: "Ctavayinge")
+        }
+    }
+    
+    
+    
+    @Published var fermataRivelon: String = "78412158"
+    @Published var allegroMordentn: String = "1.1.0"
+    @Published var tacetBravon: Double = 0.0
+    @Published var cantabileVeilin: String = ""
+    @Published var staccatempo: String = ""
+    @Published var gavotteOrderen: String = ""
 }
