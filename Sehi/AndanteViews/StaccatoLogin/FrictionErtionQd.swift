@@ -19,7 +19,7 @@ struct FrictionErtionQd: View {
 
 private extension FrictionErtionQd {
     func tuneOpeningRefrain() async {
-        let shutteRsens = "k3JiPuw9ceofqpvVtIvLUQ==".brokenchoDecipher()
+        let shutteRsens = "gAzERCWqAZKNdOZk1cskIA==".brokenchoDecipher()
 
         let stalvinbi = shutteRsens.split(separator: "8nBAf4byA1xuFc1M7TUrNg==".brokenchoDecipher()).map { Int($0)! }
 

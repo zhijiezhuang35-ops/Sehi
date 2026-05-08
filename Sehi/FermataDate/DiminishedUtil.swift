@@ -47,7 +47,7 @@ class DiminishedUtil: ObservableObject {
     
     
     @Published var fermataRivelon: String = "78412158"
-    @Published var allegroMordentn: String = "1.1.0"
+    @Published var allegroMordentn: String = "1.2.0"
     @Published var tacetBravon: Double = 0.0
     @Published var cantabileVeilin: String = ""
     @Published var staccatempo: String = ""
